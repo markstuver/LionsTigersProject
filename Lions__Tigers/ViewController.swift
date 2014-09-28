@@ -10,6 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var breedLabel: UILabel!
+    @IBOutlet weak var ageLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -21,5 +30,9 @@ class ViewController: UIViewController {
     }
 
 
+    //MARK: - Action Methods
+    @IBAction func nextButtonPressed(sender: UIBarButtonItem) {
+        
+    }
 }
 
