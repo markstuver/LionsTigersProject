@@ -21,6 +21,7 @@
 		9AF6325119D8C15C00678F7E /* Lioness.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 9AF6324919D8C15C00678F7E /* Lioness.jpeg */; };
 		9AF6325219D8C15C00678F7E /* MalayanTiger.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9AF6324A19D8C15C00678F7E /* MalayanTiger.jpg */; };
 		9AF6325319D8C15C00678F7E /* SiberianTiger.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9AF6324B19D8C15C00678F7E /* SiberianTiger.jpg */; };
+		9AF6325619D8C3C100678F7E /* Tigers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF6325519D8C3C100678F7E /* Tigers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		9AF6324919D8C15C00678F7E /* Lioness.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Lioness.jpeg; sourceTree = "<group>"; };
 		9AF6324A19D8C15C00678F7E /* MalayanTiger.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MalayanTiger.jpg; sourceTree = "<group>"; };
 		9AF6324B19D8C15C00678F7E /* SiberianTiger.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SiberianTiger.jpg; sourceTree = "<group>"; };
+		9AF6325519D8C3C100678F7E /* Tigers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tigers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 			children = (
 				9AF6322319D8C09600678F7E /* AppDelegate.swift */,
 				9AF6322519D8C09600678F7E /* ViewController.swift */,
+				9AF6325419D8C3B600678F7E /* Models */,
 				9AF6322719D8C09600678F7E /* Main.storyboard */,
 				9AF6322A19D8C09600678F7E /* Images.xcassets */,
 				9AF6322C19D8C09600678F7E /* LaunchScreen.xib */,
@@ -142,6 +145,14 @@
 				9AF6324B19D8C15C00678F7E /* SiberianTiger.jpg */,
 			);
 			path = LionsAndTigersAssets;
+			sourceTree = "<group>";
+		};
+		9AF6325419D8C3B600678F7E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9AF6325519D8C3C100678F7E /* Tigers.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AF6322619D8C09600678F7E /* ViewController.swift in Sources */,
+				9AF6325619D8C3C100678F7E /* Tigers.swift in Sources */,
 				9AF6322419D8C09600678F7E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

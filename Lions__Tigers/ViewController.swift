@@ -21,7 +21,22 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+    // Create instance of Tiger struct
+    var firstTiger = Tiger()
+        
+        // Set properties of firstTiger using Tiger properties
+        firstTiger.name = "Tigger"
+        firstTiger.breed = "Bengal Tiger"
+        firstTiger.age = 3
+        firstTiger.image = UIImage(named: "BengalTiger.jpg")
+        
+        
+        // Set View Labels using firstTiger's Tiger properties
+        nameLabel.text = firstTiger.name
+        breedLabel.text = firstTiger.breed
+        ageLabel.text = "\(firstTiger.age)"
+        imageView.image = firstTiger.image
     }
 
     override func didReceiveMemoryWarning() {
