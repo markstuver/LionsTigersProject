@@ -19,8 +19,12 @@ class ViewController: UIViewController {
     
     // Create an array with type Tiger and setting as an empty array
     var myTigers:[Tiger] = []
+    var lions:[Lion] = []
     
     var currentIndex = 0
+    
+    //Tuple to use when determining which type of animal to display.
+    var currentAnimal = (species: "Tiger", index : 0)
     
     
     override func viewDidLoad() {
@@ -34,10 +38,7 @@ class ViewController: UIViewController {
         firstTiger.breed = "Bengal Tiger"
         firstTiger.age = 3
         firstTiger.image = UIImage(named: "BengalTiger.jpg")
-    
         firstTiger.age = firstTiger.ageInTigerYearsFromAge(firstTiger.age)
-            
-            
         firstTiger.chuff()
         firstTiger.chuffANumberOfTimes(5, isLoud: false)
 
@@ -50,9 +51,7 @@ class ViewController: UIViewController {
         secondTiger.breed = "Indochinese Tiger"
         secondTiger.age = 2
         secondTiger.image = UIImage(named: "IndochineseTiger.jpg")
-        
         secondTiger.age = firstTiger.ageInTigerYearsFromAge(secondTiger.age)
-        
         secondTiger.chuff()
         
         var thirdTiger = Tiger()
@@ -60,7 +59,6 @@ class ViewController: UIViewController {
         thirdTiger.breed = "Malayan Tiger"
         thirdTiger.age = 4
         thirdTiger.image = UIImage(named: "MalayanTiger.jpg")
-        
         thirdTiger.age = firstTiger.ageInTigerYearsFromAge(thirdTiger.age)
 
         var fourthTiger = Tiger()
@@ -68,12 +66,10 @@ class ViewController: UIViewController {
         fourthTiger.breed = "Siberian Tiger"
         fourthTiger.age = 3
         fourthTiger.image = UIImage(named: "SiberianTiger.jpg")
-        
         fourthTiger.age = firstTiger.ageInTigerYearsFromAge(fourthTiger.age)
 
         // Add secondTiger, thirdTiger & fourthTiger to myTigers array using Logic Operator short-hand
         myTigers += [secondTiger, thirdTiger, fourthTiger]
-        
         
         firstTiger.chuffANumberOfTimes(3)
         secondTiger.chuffANumberOfTimes(2)
@@ -85,6 +81,27 @@ class ViewController: UIViewController {
         self.imageView.image = firstTiger.image
         self.randomFactLabel.text = firstTiger.randomFact()
         
+        // Create a variable instance of the Lion Class
+        var lion = Lion()
+        lion.age = 4
+        lion.isAlphaMale = false
+        lion.image = UIImage(named: "Lion.jpg")
+        lion.name = "Mufasa"
+        lion.subspecies = "West African"
+        
+        // Create a variable instance of the Lion Class
+        var lioness = Lion()
+        lioness.age = 3
+        lioness.isAlphaMale = false
+        lioness.image = UIImage(named: "Lioness.jpeg")
+        lioness.name = "Sarabi"
+        lioness.subspecies = "Barbary"
+        
+        // Load the 2 instances of the Lion Class into the lions array
+        self.lions += [lion, lioness]
+        
+        
+        
     }
     
 
@@ -93,7 +110,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    //MARK: - Action Methods
+    //MARK: - ACTION METHOD
     
     // Updates the UI objects with random instances of the Tiger
     @IBAction func nextButtonPressed(sender: UIBarButtonItem) {
@@ -111,6 +128,7 @@ class ViewController: UIViewController {
           // if the current tiger is the same as the random number, run the random number code againg until it is a different tiger
         } while currentIndex == randomIndex
     
+        
         currentIndex = randomIndex
         
         
@@ -143,6 +161,24 @@ class ViewController: UIViewController {
     }
     
     
+    //MARK: - HELPER FUNCTIONS
+    
+    // Function that will be called to assure that we are every selection is of a different type then the previous
+    func updateAnimal() {
+        
+        // currentAnimal is a Tuple created as a property
+        switch currentAnimal {
+            
+            // This is comparing the value in the case statement to the currentAnimal Tuple
+        case ("Tiger", _) :
+            let randomIndex = Int(arc4random_uniform(UInt32(lions.count)))
+            currentAnimal = ("Lion", randomIndex)
+            
+        default:
+            let randomIndex = Int(arc4random_uniform(UInt32(myTigers.count)))
+            currentAnimal = ("Tiger", randomIndex)
+        }
+    }
     
     
 }
