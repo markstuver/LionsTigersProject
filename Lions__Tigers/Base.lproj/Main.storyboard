@@ -16,6 +16,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kfl-K8-8h8">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                </variation>
+                            </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dom-6o-aLH">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <items>
@@ -63,35 +69,29 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="454" width="343" height="72"/>
+                                    <rect key="frame" x="16" y="454" width="343" height="111"/>
                                 </variation>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kfl-K8-8h8">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
-                                </variation>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="kfl-K8-8h8"/>
                                 <exclude reference="dom-6o-aLH"/>
                                 <exclude reference="NxZ-LH-MgJ"/>
                                 <exclude reference="Hzc-bq-qW2"/>
                                 <exclude reference="HGV-mE-tBw"/>
                                 <exclude reference="gBY-Wq-e4u"/>
-                                <exclude reference="kfl-K8-8h8"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
+                                <include reference="kfl-K8-8h8"/>
                                 <include reference="dom-6o-aLH"/>
                                 <include reference="NxZ-LH-MgJ"/>
                                 <include reference="Hzc-bq-qW2"/>
                                 <include reference="HGV-mE-tBw"/>
                                 <include reference="gBY-Wq-e4u"/>
-                                <include reference="kfl-K8-8h8"/>
                             </mask>
                         </variation>
                     </view>

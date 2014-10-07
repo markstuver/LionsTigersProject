@@ -17,5 +17,34 @@ class Lion {
     var name = ""
     var subspecies = ""
     
+    // class function that can be called from a Lion instance
+    func roar() {
+        
+        println("Lion: Roar! Roar!")
+    }
+    
+    
+    func changeToAlphaMale() {
+        
+        self.isAlphaMale = true
+    }
+    
+    // Function that returns a String value
+    func randomFact() ->String {
+        
+        var randomFact:String
+        
+        if self.isAlphaMale  {
+             randomFact = "Male lions are easy to recongize thanks to their distictive manes. Males with darker manes are more likely to attract females"
+        }
+        else {
+            randomFact = "Female Lionesses form the stable social unit and do not tolerate outside females"
+        }
+        
+        return randomFact
+    }
+    
+    
+    
 }
 
